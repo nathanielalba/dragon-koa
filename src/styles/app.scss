@@ -1,7 +1,13 @@
 // importing bootstrap
-@import "base/_bootstrap_custom";
+@import "base/bootstrap_custom";
 
 // this is for our variables over all our files
-@import "base/_variables";
+@import "base/variables";
+
+// for fonts
+@import "base/fonts";
+
+// here is our layout styles
+@import "layout/index";
 
 // here is for our components

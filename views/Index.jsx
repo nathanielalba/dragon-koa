@@ -14,7 +14,7 @@ export default class Index extends Component {
 
     return (
       <Layout>
-        <div id="app" dangerouslySetInnerHTML={{ __html: contentString }}>
+        <div id="app" dangerouslySetInnerHTML={{ __html: contentString }} className="app-container">
         </div>
       </Layout>
     )
