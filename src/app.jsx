@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import App from './components/App.jsx';
+import router from './routes/routes.jsx';
+
+import { config } from './store/config.jsx';
 
 require('!style!css!sass!resolve-url!sass?sourceMap!applicationStyles');
 
 ReactDOM.render(
-  <App />,
+  <Provider store={config()}>
+    { router }
+  </Provider>,
   document.getElementById('app')
 )

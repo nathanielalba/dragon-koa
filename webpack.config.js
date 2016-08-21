@@ -54,5 +54,6 @@ module.exports = {
   },
   postcss: function() {
     return [require('autoprefixer'), require('precss')]
-  }
+  },
+  devtool: 'inline-source-map'
 };

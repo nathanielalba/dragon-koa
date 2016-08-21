@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-import App from '../src/components/App.jsx';
+import Home from '../src/components/Home.jsx';
 import Layout from './Layout.jsx';
 
 export default class Index extends Component {
@@ -10,7 +10,7 @@ export default class Index extends Component {
   }
 
   render() {
-  const contentString = ReactDOMServer.renderToString(<App />);
+  const contentString = ReactDOMServer.renderToString(<Home />);
 
     return (
       <Layout>
