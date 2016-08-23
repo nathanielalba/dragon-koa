@@ -12,15 +12,17 @@ export default class Navbar extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">Brand</a>
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-               <li className="active"><a href="#">Link <span className="sr-only">(current)</span></a></li>
-               <li><a href="#">Link</a></li>
-               <li><a href="#">Link2</a></li>
-               <li><a href="#">Link3</a></li>
-             </ul>
+               <li><a href="#">Browse</a></li>
+               <li><a href="#">Events</a></li>
+               <li><a href="#">Directory</a></li>
+            </ul>
+            <ul className="nav navbar-nav navbar-right">
+              <li><a href="#">Sign Up</a></li>
+              <li className="ghost-button"><a href="#">Log In</a></li>
+            </ul>
           </div>
         </div>
       </nav>
