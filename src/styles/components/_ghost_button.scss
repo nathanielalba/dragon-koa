@@ -1,8 +1,11 @@
 .ghost-button {
-  color: #009688;
-  background: #fff;
-  border: 1px solid #009688;
-  display: inline-block;
-  text-decoration: none;
-  min-width: 120px;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-family: inherit;
+	vertical-align: middle;
+	border: 1px solid;
+	transition: all 0.2s ease;
+	box-sizing: border-box;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
 }

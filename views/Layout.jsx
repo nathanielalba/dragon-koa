@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Navbar from './Navbar.jsx';
-
 export default class Layout extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +12,6 @@ export default class Layout extends React.Component {
           <title>dragonKoa</title>
         </head>
         <body>
-          <Navbar />
           <div className="container">
             {this.props.children}
           </div>

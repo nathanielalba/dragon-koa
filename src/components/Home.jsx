@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Navbar from './Navbar.jsx';
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -14,8 +16,8 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <p>Hello</p>
-        <a onClick={this.onClickTest}>CLICK ME PREASE</a>
+        <Navbar />
+        {this.props.children}
       </div>
     )
   }
