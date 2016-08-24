@@ -14,7 +14,7 @@ export default class Navbar extends Component {
               <span className="icon-bar"></span>
             </button>
           </div>
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div className="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
                <li><Link to='browse' activeClassName='navbar-active'>Browse</Link></li>
                <li><Link to='events' activeClassName='navbar-active'>Events</Link></li>
