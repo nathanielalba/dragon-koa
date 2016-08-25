@@ -1,11 +1,13 @@
-const monk = require('monk');
-const wrap = require('co-monk');
-const db = monk('localhost/dragonChatKoa');
-
-const games = require('../models/games');
+const parse = require('co-body');
+const gamesDB = require('../models/games').db;
 
 exports.index = function *() {
-  const res = yield games.find({});
+  const res = yield gamesDB.find({});
   this.body = res;
   // this.body = yield games;
+}
+
+exports.post = function *() {
+  const postData = yield parse(this);
+  this.body = postData;
 }

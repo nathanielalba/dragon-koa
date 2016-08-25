@@ -1,4 +1,3 @@
-const db = require('../lib/db');
-const wrap = require('co-monk');
+const gamesDB = require('../lib/connection')('games');
 
-module.exports = wrap(db.get('games'));
+exports.db = gamesDB;
