@@ -1,7 +1,9 @@
 const parse = require('co-body');
+const validator = require('validator');
 
 const usersDB = require('../lib/connection')('users');
 const User = require('../models/users');
+const userLogin = require('../lib/login');
 
 
 exports.signup = function *() {
@@ -11,5 +13,9 @@ exports.signup = function *() {
 }
 
 exports.login = function *() {
-  yield console.log('login');
+  const res = yield parse(this);
+  const login = userLogin(res.email, res.password);
+  if(login) {
+    console.log('logged in successfully');
+  }
 }
