@@ -8,8 +8,10 @@ import { config } from './store/config.jsx';
 
 require('!style!css!sass!resolve-url!sass?sourceMap!applicationStyles');
 
+const store = config();
+
 ReactDOM.render(
-  <Provider store={config()}>
+  <Provider store={store}>
     { router }
   </Provider>,
   document.getElementById('app')

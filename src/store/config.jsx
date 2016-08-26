@@ -1,10 +1,14 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 
-export var config = (initialState = {}) => {
-  var reducer = redux.combineReducers({});
+import { gamesReducer } from '../reducers/games_reducer.jsx';
 
-  var store = redux.createStore(reducer, initialState, redux.compose(
+export const config = (initialState = {}) => {
+  const reducer = redux.combineReducers({
+    games: gamesReducer
+  });
+
+  const store = redux.createStore(reducer, initialState, redux.compose(
     redux.applyMiddleware(thunk)
   ));
 
