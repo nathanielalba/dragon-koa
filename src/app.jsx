@@ -8,7 +8,9 @@ import { config } from './store/config.jsx';
 
 require('!style!css!sass!resolve-url!sass?sourceMap!applicationStyles');
 
-const store = config();
+const preloadedState = window.__PRELOADED_STATE__
+
+const store = config(preloadedState);
 
 ReactDOM.render(
   <Provider store={store}>
