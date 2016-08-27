@@ -19,7 +19,7 @@ const assetsPath = path.join(__dirname, 'public');
 react(app, { views: viewPath });
 
 register({
-  presets: [ 'es2015', 'react' ],
+  presets: [ 'stage-0', 'es2015', 'react' ],
   extensions: [ '.jsx' ]
 });
 
