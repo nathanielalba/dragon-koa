@@ -30,20 +30,20 @@ class IndexPage extends Component {
     } else {
       return (
         <div>
-          {
-            games.map((game) => {
-              return (
-                <Masonry
-                  elementType={'div'}
-                  options={masonryOptions}
-                  disableImagesLoaded={false}
-                  updateOnEachImageLoad={false}
-                >
+          <Masonry
+            elementType={'div'}
+            options={masonryOptions}
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={false}
+          >
+            {
+              games.map((game) => {
+                return (
                   <GameIcon {...game} key={game.id}/>
-                </Masonry>
-              )
-            })
-          }
+                )
+              })
+            }
+          </Masonry>
         </div>
       );
     }

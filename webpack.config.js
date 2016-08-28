@@ -43,6 +43,10 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exlude: /node_modules/
+      },
+      {
+        loader: 'imports?define=>false&this=>window',
+        test: /masonry|imagesloaded|fizzy\-ui\-utils|desandro\-|outlayer|get\-size|doc\-ready|eventie|eventemitter/
       }
     ]
   },
