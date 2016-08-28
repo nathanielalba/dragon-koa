@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-import { REQUEST_GAMES_LIST, RECEIVE_GAMES_LIST } from './types.js';
+import { REQUEST_GAMES_LIST, RECEIVE_GAMES_LIST } from './types.jsx';
 import API_URL from '../lib/variables';
 
 export var requestGamesList = () => {
   return {
-    type: SET_GAMES_LIST,
+    type: REQUEST_GAMES_LIST,
   }
 };
 
@@ -19,12 +19,13 @@ export var receiveData = (data) => {
 export function fetchData() {
   return function(dispatch) {
     dispatch(requestGamesList());
-    return axios({
-      url: API_URL + '/games',
-      timeout: 20000,
-      method: 'GET',
-      responseType: 'json'
-    })
+    // return axios({
+    //   url: 'http://api.lvh.me:8000/games',
+    //   timeout: 20000,
+    //   method: 'GET',
+    //   responseType: 'json'
+    // })
+    return axios.get('http://api.lvh.me:8000/games')
       .then((res) => {
         console.log('api fetch');
         console.log(res.data);

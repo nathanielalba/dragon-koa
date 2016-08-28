@@ -14,7 +14,7 @@ import { fetchData } from '../actions/index_actions.jsx';
 export default (
   <Router history={browserHistory}>
     <Route path='/' component={Home}>
-      <IndexRoute component={IndexPage} onEnter={fetchData}/>
+      <IndexRoute component={IndexPage}/>
       <Route path='/browse' components={Browse} name='browse' />
       <Route path='/directory' components={Directory} name='directory' />
       <Route path='/events' components={Events} name='events' />

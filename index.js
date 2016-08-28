@@ -7,6 +7,7 @@ const react = require('koa-react-view');
 const subdomain = require('koa-subdomain')();
 const json = require('koa-json');
 const logger = require('koa-logger');
+const cors = require('koa-cors');
 
 const PORT = process.env.PORT || 8000
 
@@ -30,6 +31,7 @@ app.use(subdomain.routes());
 app.use(staticCache(assetsPath));
 app.use(json({ pretty: false, param: 'pretty' }));
 app.use(logger());
+app.use(cors());
 
 app.listen(PORT);
 console.log('Koa Server running on port:', PORT);

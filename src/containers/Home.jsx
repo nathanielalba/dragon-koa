@@ -6,13 +6,6 @@ import Navbar from '../components/Navbar.jsx';
 class Home extends Component {
   constructor(props) {
     super(props);
-
-    this.onClickTest = this.onClickTest.bind(this);
-  }
-
-
-  onClickTest() {
-    alert('In react');
   }
 
   render() {

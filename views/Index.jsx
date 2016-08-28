@@ -35,9 +35,6 @@ export default class Index extends Component {
       <Layout>
         <div id="app">
           ${html}
-          <script>
-            window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState)}
-          </script>
         </div>
       </Layout>
     )

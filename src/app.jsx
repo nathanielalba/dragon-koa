@@ -10,7 +10,7 @@ require('!style!css!sass!resolve-url!sass?sourceMap!applicationStyles');
 
 const preloadedState = window.__PRELOADED_STATE__
 
-const store = config(preloadedState);
+const store = config();
 
 ReactDOM.render(
   <Provider store={store}>
