@@ -1,14 +1,16 @@
 // importing bootstrap
 @import "base/bootstrap_custom";
 
-// this is for our variables over all our files
+// any bootstrap customs or global variables
 @import "base/variables";
 @import "base/utils";
+@import "base/thumbnail";
 
 // for fonts
 @import "base/fonts";
 
 // here is our layout styles
+@import "layout/body";
 @import "layout/index";
 @import "layout/navbar";
 

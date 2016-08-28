@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Masonry from 'react-masonry-component';
+
 import { fetchData } from '../actions/index_actions.jsx';
+import GameIcon from './GameIcon.jsx';
 
 class IndexPage extends Component {
   constructor(props) {
@@ -14,7 +17,11 @@ class IndexPage extends Component {
   }
 
   renderGames() {
-    const { games } = this.props;
+    const { games } = this.props.games;
+
+    const masonryOptions = {
+      transitionDuration: 0
+    }
 
     if(games.length === 0) {
       return (
@@ -23,8 +30,20 @@ class IndexPage extends Component {
     } else {
       return (
         <div>
-          <p>Here is home</p>
-          <p>{console.log(this.props.games)}</p>
+          {
+            games.map((game) => {
+              return (
+                <Masonry
+                  elementType={'div'}
+                  options={masonryOptions}
+                  disableImagesLoaded={false}
+                  updateOnEachImageLoad={false}
+                >
+                  <GameIcon {...game} key={game.id}/>
+                </Masonry>
+              )
+            })
+          }
         </div>
       );
     }

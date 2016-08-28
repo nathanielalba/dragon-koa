@@ -36,6 +36,7 @@
     "nodemon": "^1.10.2",
     "password-hash": "^1.2.2",
     "react-bootstrap": "^0.30.2",
+    "react-masonry-component": "^4.2.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.7.0",
     "redux": "^3.5.2",
