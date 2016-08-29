@@ -21,6 +21,8 @@ exports.detailsParam = function *(slug, next) {
 }
 
 exports.details = function *(next) {
+  this.set('Access-Control-Allow-Origin', '*')
+  this.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   this.body = this.game;
   // const game = yield gamesDB.findOne()
 }

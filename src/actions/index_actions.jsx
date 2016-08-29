@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { REQUEST_GAMES_LIST, RECEIVE_GAMES_LIST } from './types.jsx';
-import API_URL from '../lib/variables';
+import API_URL from '../lib/variables.jsx';
 
 export var requestGamesList = () => {
   return {
@@ -27,8 +27,6 @@ export function fetchData() {
     // })
     return axios.get('http://api.lvh.me:8000/games')
       .then((res) => {
-        console.log('api fetch');
-        console.log(res.data);
         dispatch(receiveData(res.data))
       });
   }
