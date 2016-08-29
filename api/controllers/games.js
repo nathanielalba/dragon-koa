@@ -13,3 +13,14 @@ exports.post = function *() {
   const postData = yield parse(this);
   this.body = postData;
 }
+
+exports.detailsParam = function *(slug, next) {
+  this.game = yield gamesDB.findOne({ "slug": slug });
+  if (!this.game) return this.status = 404;
+  yield next;
+}
+
+exports.details = function *(next) {
+  this.body = this.game;
+  // const game = yield gamesDB.findOne()
+}
