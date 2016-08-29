@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import Masonry from 'react-masonry-component';
 
 import { fetchData } from '../actions/index_actions.jsx';
@@ -38,8 +39,11 @@ class IndexPage extends Component {
           >
             {
               games.map((game) => {
+                let route = "/games/" + game.slug
                 return (
-                  <GameIcon {...game} key={game.id}/>
+                  <Link to={route}>
+                    <GameIcon {...game} key={game.id} />
+                  </Link>
                 )
               })
             }
@@ -51,7 +55,7 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="home-page">
         { this.renderGames() }
       </div>
     );

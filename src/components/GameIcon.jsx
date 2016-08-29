@@ -9,11 +9,8 @@ export default class GameIcon extends Component {
     const { iconUrl, title, id } = this.props;
 
     return (
-      <div className="thumbnail">
+      <div className="thumbnail" key={id}>
         <img src={iconUrl} alt={title} />
-        <div className="caption">
-          <h3>{title}</h3>
-        </div>
       </div>
     );
   }

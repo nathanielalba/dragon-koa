@@ -1,5 +1,14 @@
 .thumbnail {
+  margin: 0 1rem;
+
   img {
-    height: 17rem;
+    width: 30rem;
+    -webkit-transition: filter .3s;
+    transition: filter .3s;
+  }
+
+  &:hover {
+    -webkit-filter: grayscale(60%);
+    filter: grayscale(60%);
   }
 }

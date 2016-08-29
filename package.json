@@ -16,6 +16,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-register": "^6.11.6",
     "bcrypt": "^0.8.7",
+    "classnames": "^2.2.5",
     "co-body": "^4.2.0",
     "co-monk": "^1.0.0",
     "escape-html": "^1.0.3",
