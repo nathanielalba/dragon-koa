@@ -20,8 +20,8 @@ export default class Navbar extends Component {
                <li><Link to='events' activeClassName='navbar-active'>Events</Link></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">Log In</a></li>
+              <li><Link to='#'>sign up</Link></li>
+              <li><Link to='login'>login</Link></li>
             </ul>
           </div>
         </div>

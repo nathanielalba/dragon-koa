@@ -8,6 +8,7 @@ import GameDashboard from '../components/GameDashboard.jsx';
 import GameDetails from '../components/GameDetails.jsx';
 import GameList from '../components/GameList.jsx';
 import Events from '../components/Events.jsx';
+import Login from '../components/Login.jsx';
 
 export default (
   <Router history={browserHistory}>
@@ -19,5 +20,6 @@ export default (
       <IndexRoute component={GameList} />
       <Route path='/games/:slug' component={GameDetails} />
     </Route>
+    <Route path='/login' component={Login} />
   </Router>
 );
