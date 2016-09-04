@@ -8,14 +8,14 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login-box">
-        <form>
+        <form className="login-form">
           <div className="form-group">
-            <input type="email" className="form-control" id="email" />
+            <input type="email" className="form-control input-lg" id="email" />
           </div>
           <div className="form-group">
-            <input type="password" className="form-control" id="password" />
+            <input type="password" className="form-control input-lg" id="password" />
           </div>
-          <button className="btn btn-default">Log In</button>
+          <button className="btn btn-default btn-block btn-lg">Log In</button>
         </form>
       </div>
     )
