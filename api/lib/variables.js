@@ -1,3 +1,3 @@
 const bcrypt = require('bcrypt');
 
-exports.salt = bcrypt.genSaltSync(10);
+exports.salt = '$2a$10$z6wUdL70tnsbDA7b2tjXS.';

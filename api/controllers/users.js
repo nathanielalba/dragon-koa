@@ -16,10 +16,19 @@ exports.signup = function *() {
 }
 
 exports.login = function *() {
+  this.set('Access-Control-Allow-Origin', '*')
+  this.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   const res = yield parse(this);
-  const login = userLogin(res.email, res.password);
-  if(login) {
-    this.body = { token: jwtSign(login) };
+  const userFound = yield userLogin(res.params.email, res.params.password)
+  if(userFound) {
+    const token = jwtSign(res.params);
+    console.log('correct');
+    this.status = 200;
+    this.body = { token: token }
+  } else {
+    console.log('bad login');
+    this.status = 404
+    this.body = { 'error': 'bad login' }
   }
 }
 

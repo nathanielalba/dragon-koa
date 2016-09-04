@@ -8,7 +8,16 @@ function *userLogin(email, password) {
   if(validator.isEmail(email) && !validator.isNull(password)) {
     const user = yield usersDB.findOne({ email: email });
     if (user) {
-      yield bcrypt.hashSync(password, salt) === user.password;
+      if (bcrypt.hashSync(password, salt) === user.password) {
+        console.log('password matches');
+        return true;
+      } else {
+        console.log('password does not match');
+        return false;
+      }
+    } else {
+      console.log('user not found');
+      return false;
     }
   }
 }
