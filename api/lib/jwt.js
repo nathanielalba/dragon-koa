@@ -7,12 +7,12 @@ const privateKey = fs.readFileSync('api/lib/keys/dragonChat.rsa');
 const algorithm = { algorithm: 'RS256' };
 
 function signJWT(user) {
-  const token = jwt.sign(user, privateKey, algorithm)
+  const token = jwt.sign(user, privateKey)
   return token;
 };
 
 function verifyJWT(webToken) {
-  return jwt.verify(webToken, privateKey);
+  return jwt.verify(webToken, publicKey);
 }
 
 module.exports.sign = signJWT;
