@@ -12,8 +12,7 @@ function signJWT(user) {
 };
 
 function verifyJWT(webToken) {
-  const token = jwt.verify(webToken, privateKey);
-  return token;
+  return jwt.verify(webToken, privateKey);
 }
 
 module.exports.sign = signJWT;

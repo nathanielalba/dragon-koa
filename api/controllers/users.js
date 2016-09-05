@@ -21,8 +21,13 @@ exports.login = function *() {
   const res = yield parse(this);
   const userFound = yield userLogin(res.params.email, res.params.password)
   if(userFound) {
-    const token = jwtSign(res.params);
-    console.log('correct');
+    const claims = {
+      sub: res.params.email,
+      iss: 'http://api.lvh.me:8000',
+      permissions: ''
+    }
+    const token = jwtSign(claims);
+    console.log(token);
     this.status = 200;
     this.body = { token: token }
   } else {
@@ -34,5 +39,5 @@ exports.login = function *() {
 
 exports.verify = function *() {
   const res = yield parse(this);
-  console.log(res.token);
+  console.log(jwtVerify(res.token));
 }
