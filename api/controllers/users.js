@@ -22,6 +22,7 @@ exports.login = function *() {
   const userFound = yield userLogin(res.params.email, res.params.password)
   if(userFound) {
     const claims = {
+      // anything else that i may need to use can be included here
       sub: res.params.email,
       iss: 'http://api.lvh.me:8000',
       permissions: ''
